@@ -8,7 +8,7 @@
     </requiredProperty>
   </requiredProperties>
   <modules>
-    <module id="basicextension-configuration" dir="basicextension-configuration" name="basicextension-configuration">
+    <module id="${extensionName}-configuration" dir="__extensionName__-configuration" name="${extensionName}-configuration">
       <fileSets>
         <fileSet filtered="true" encoding="UTF-8">
           <directory>src/main/resources</directory>
@@ -18,7 +18,7 @@
         </fileSet>
       </fileSets>
     </module>
-    <module id="basicextension-war" dir="basicextension-war" name="basicextension-war">
+    <module id="${extensionName}-war" dir="__extensionName__-war" name="${extensionName}-war">
       <fileSets>
         <fileSet filtered="true" encoding="UTF-8">
           <directory>src/main/webapp</directory>
@@ -38,7 +38,7 @@
         </fileSet>
       </fileSets>
     </module>
-    <module id="basicextension-ear" dir="basicextension-ear" name="basicextension-ear">
+    <module id="${extensionName}-ear" dir="__extensionName__-ear" name="${extensionName}-ear">
       <fileSets>
         <fileSet encoding="UTF-8">
           <directory>src/main/application</directory>

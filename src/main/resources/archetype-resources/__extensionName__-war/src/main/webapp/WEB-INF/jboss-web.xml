@@ -1,0 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<jboss-web>
+  <security-domain>java:/jaas/gatein-domain</security-domain>
+</jboss-web>
