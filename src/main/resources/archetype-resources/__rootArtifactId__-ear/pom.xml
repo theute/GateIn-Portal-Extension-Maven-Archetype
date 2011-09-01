@@ -15,16 +15,16 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-ear-plugin</artifactId>
-<!--        <version>2.6</version> -->
+        <version>2.6</version>
         <configuration>
-<!--            <version>5</version> -->
+            <version>5</version>
             <defaultLibBundleDir>lib</defaultLibBundleDir>
             <modules>
               <webModule>
-                 <groupId>org.gatein.example</groupId>
-  		         <artifactId>basicextension-war</artifactId>
-  		         <contextRoot>basicextension</contextRoot>
-  		         <bundleFileName>basicextension.war</bundleFileName>
+                 <groupId>${groupId}</groupId>
+                 <artifactId>${rootArtifactId}-war</artifactId>
+                 <contextRoot>${extensionName}</contextRoot>
+                 <bundleFileName>${extensionName}.war</bundleFileName>
               </webModule>
             </modules>
         </configuration>
@@ -34,14 +34,14 @@
   
   <dependencies>
     <dependency>
-  	  <groupId>org.gatein.example</groupId>
-  	  <artifactId>basicextension-configuration</artifactId>
-  	  <version>0.0.1-SNAPSHOT</version>
+  	  <groupId>${groupId}</groupId>
+  	  <artifactId>${rootArtifactId}-configuration</artifactId>
+  	  <version>${version}</version>
   	</dependency>
     <dependency>
-      <groupId>org.gatein.example</groupId>
-      <artifactId>basicextension-war</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <groupId>${groupId}</groupId>
+      <artifactId>${rootArtifactId}-war</artifactId>
+      <version>${version}</version>
       <type>war</type>
     </dependency>
   </dependencies>
