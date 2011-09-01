@@ -1,0 +1,46 @@
+What is it:
+===========
+Those are sources for a Maven archetype to get started with a GateIn/EPP extension quickly
+
+How to use this archetype:
+==========================
+
+Note that this archetype hasn't been published to any repository at this stage, so you will need to:
+	1) Download the sources
+	2) Build the archetype project
+	3) Create a project from this archetype
+	4) Build the project
+	5) Deploy
+
+1) Download the sources:
+========================
+
+Option a:
+	If you have GIT installed:
+		Type: git clone git://github.com/theute/GateIn-Portal-Extension-Maven-Archetype.git
+Option b:
+	If you don't have GIT installed:
+		Download and unzip: https://github.com/theute/GateIn-Portal-Extension-Maven-Archetype/zipball/master
+
+2) Build the project:
+=====================
+Do: "mvn install" at the root of the project
+
+3) Create your project:
+=======================
+
+groupId:       is the groupId that you want for your project, choose the one you want.
+artifactId:    is the artifactId that you want for your project, choose the one you want.
+version:       is the version for your project, choose the one you want.
+extensionName: is your portal extension name, pick a single word (no special character)
+
+mvn archetype:generate -DarchetypeGroupId=org.gatein.archetypes -DarchetypeArtifactId=portal-container-extension -DgroupId=org.test -DartifactId=foo -Dversion=1.0-SNAPSHOT -DextensionName=myExtension
+
+4) Build the project:
+=====================
+Go to the newly created folder and execute: mvn clean install
+
+5) Deploy the project:
+======================
+Get the ear file and copy it over to the deploy directory of GateIn or EPP.
+Now if you start the portal and go to http://localhost:8080/portal you should see the front page changed.
